@@ -7,6 +7,7 @@ import 'examples/form_example.dart';
 import 'examples/webview_example.dart';
 import 'examples/ui_components_example.dart';
 import 'examples/toss_style_example.dart';
+import 'examples/yaffleira_webview_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -184,6 +185,22 @@ class MyHomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => const TossStyleExample(),
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            _buildLessonCard(
+              context,
+              number: '9',
+              title: '🚀 Yaffleira WebView',
+              description: 'React ↔ Flutter 양방향 통신 (Handshake)',
+              icon: Icons.sync_alt,
+              color: const Color(0xFF6366f1),
+              difficulty: '⭐⭐⭐⭐ 고급',
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const YaffleiraWebViewExample(),
                 ),
               ),
             ),

@@ -1,8 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 인터넷 권한 추가 (WebView에서 외부 URL 로드에 필요) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 개발 환경에서 HTTP 트래픽 허용 (프로덕션에서는 HTTPS 사용 권장) -->
     <application
         android:label="flutter_learning_app"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
